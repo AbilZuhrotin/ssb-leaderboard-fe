@@ -1,0 +1,20 @@
+{
+  "name": "SSB Leaderboard Bagas",
+  "short_name": "SSB-App",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#d00000",
+  "theme_color": "#d00000",
+  "icons": [
+    {
+      "src": "assets/logo.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "assets/logo.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}

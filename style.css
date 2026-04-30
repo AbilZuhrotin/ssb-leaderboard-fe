@@ -1,0 +1,32 @@
+/* Import Font Biar Premium */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
+
+:root {
+  --ssb-red: #d00000;
+  --ssb-blue: #1d3557;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: #f3f4f6;
+}
+
+/* Animasi biar gak statis (Biar Dosen Terkesan) */
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Style Khusus buat Kartu FIFA yang susah pake Tailwind murni */
+.fifa-card {
+  clip-path: polygon(0 0, 100% 0, 100% 88%, 50% 100%, 0 88%);
+  transition: all 0.3s ease;
+}
+
+.fifa-card:hover {
+  transform: scale(1.05) rotate(1deg);
+}
