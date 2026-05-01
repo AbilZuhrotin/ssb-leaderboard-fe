@@ -20,13 +20,20 @@ body {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
-
-/* Style Khusus buat Kartu FIFA yang susah pake Tailwind murni */
-.fifa-card {
-  clip-path: polygon(0 0, 100% 0, 100% 88%, 50% 100%, 0 88%);
-  transition: all 0.3s ease;
+/* Bentuk Kartu FIFA Merah */
+.fifa-card-red {
+    background: linear-gradient(135deg, #1a1a1a 0%, #780000 100%);
+    /* Ini yang bikin bentuknya melengkung Bil */
+    clip-path: polygon(0% 15%, 50% 0%, 100% 15%, 100% 85%, 50% 100%, 0% 85%);
+    border: 2px solid #d00000;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(208, 0, 0, 0.3);
 }
 
-.fifa-card:hover {
-  transform: scale(1.05) rotate(1deg);
+.stat-line {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.text-crimson {
+    color: #ff4d4d;
 }

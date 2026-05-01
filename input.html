@@ -25,17 +25,17 @@
                 <i data-lucide="arrow-left" class="w-6 h-6"></i>
             </button>
             <div>
-                <h1 class="text-3xl font-black italic tracking-tighter uppercase leading-none">Input Performa</h1>
-                <p class="text-[10px] font-bold opacity-75 uppercase tracking-[0.2em] mt-1">Evaluasi Pemain Mingguan</p>
+                <h1 class="text-3xl font-black leading-none">Input Performa</h1>
+                <p class="text-sm opacity-70 font-bold">Evaluasi Pemain Mingguan</p>
             </div>
         </div>
     </header>
 
-    <div class="max-w-4xl mx-auto p-6 -mt-10 relative z-20">
+    <div class="max-w-4xl mx-auto p-6 -mt-10 relative z-20 mt-5">
         <div class="glass-card p-8 md:p-12 rounded-[3rem] shadow-2xl space-y-8">
             
             <div class="form-control">
-                <label class="label mb-2"><span class="text-xs font-black text-slate-400 uppercase tracking-widest">Target Pemain</span></label>
+                <label class="label mb-2"><span class="text-kg font-medium text-slate-400">Target Pemain</span></label>
                 <div class="relative">
                     <select class="select select-bordered w-full bg-slate-50 rounded-2xl pl-12 font-bold focus:border-red-600 focus:ring-0">
                         <option disabled selected>Cari Nama Pemain...</option>
@@ -51,14 +51,14 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div class="form-control">
-                    <label class="label mb-2"><span class="text-xs font-black text-slate-400 uppercase tracking-widest">Dribbling</span></label>
+                    <label class="label mb-2"><span class="text-kg font-medium text-slate-400">Dribbling</span></label>
                     <div class="relative">
                         <input type="number" placeholder="1-100" class="input input-bordered w-full bg-slate-50 rounded-2xl pl-12 font-bold focus:border-red-600">
                         <i data-lucide="zap" class="w-5 h-5 absolute left-4 top-1/2 -translate-y-1/2 text-red-500"></i>
                     </div>
                 </div>
                 <div class="form-control">
-                    <label class="label mb-2"><span class="text-xs font-black text-slate-400 uppercase tracking-widest">Passing</span></label>
+                    <label class="label mb-2"><span class="text-kg font-medium text-slate-400">Passing</span></label>
                     <div class="relative">
                         <input type="number" placeholder="1-100" class="input input-bordered w-full bg-slate-50 rounded-2xl pl-12 font-bold focus:border-red-600">
                         <i data-lucide="move-right" class="w-5 h-5 absolute left-4 top-1/2 -translate-y-1/2 text-blue-500"></i>
@@ -68,23 +68,20 @@
 
             <div class="form-control bg-slate-50 p-6 rounded-[2rem] border border-slate-100">
                 <div class="flex justify-between items-center mb-6">
-                    <span class="text-xs font-black text-slate-400 uppercase tracking-widest">Shooting Power</span>
+                    <span class="text-kg font-medium text-slate-400">Shooting Power</span>
                     <span class="bg-red-100 text-red-600 px-4 py-1 rounded-full text-xs font-black italic">80%</span>
                 </div>
                 <input type="range" min="0" max="100" value="80" class="range range-error range-sm">
-                <div class="w-full flex justify-between text-[10px] px-2 mt-2 font-bold text-slate-300">
-                    <span>LOW</span>
-                    <span>MEDIUM</span>
-                    <span>MAX</span>
+                <div class="w-full flex justify-between text-md px-2 mt-2 font-medium text-slate-400">
+                    <span>Low</span>
+                    <span>Medium</span>
+                    <span>Max</span>
                 </div>
             </div>
 
             <div class="flex flex-col gap-4 pt-6">
-                <button onclick="alert('Berhasil! Data performa pemain telah diperbarui.'); history.back()" class="btn bg-[#d00000] hover:bg-[#990000] border-none text-white h-16 rounded-2xl text-lg font-black tracking-tight shadow-xl shadow-red-200">
-                    SIMPAN PERFORMA
-                </button>
-                <button onclick="history.back()" class="btn btn-ghost text-slate-400 font-bold uppercase tracking-widest text-xs">
-                    Batalkan Perubahan
+                <button onclick="alert('Berhasil! Data performa pemain telah diperbarui.'); history.back()" class="btn bg-[#d00000] hover:bg-[#990000] border-none text-white h-16 rounded-xl text-lg font-bold shadow-xl shadow-red-200">
+                    Simpan Performa
                 </button>
             </div>
         </div>

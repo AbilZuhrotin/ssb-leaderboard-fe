@@ -9,37 +9,52 @@
     <link rel="manifest" href="manifest.json">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap"
-        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 
-<body class="bg-gradient-to-br from-[#d00000] to-[#1d3557] min-h-screen flex items-center justify-center p-4 fade-in">
-  <div class="bg-white/95 backdrop-blur-sm p-8 rounded-[2rem] shadow-2xl w-full max-w-sm border border-white/20">
+<body class="bg-gradient-to-br from-[#1d3557] to-[#d00000] min-h-screen flex items-center justify-center p-4">
+  <div class="bg-white p-12 rounded-[3rem] shadow-2xl w-full max-w-md border border-white/20">
     <div class="text-center mb-8">
-      <img src="assets/logo.jpg" class="w-20 h-20 mx-auto rounded-full border-4 border-red-600 mb-4 shadow-lg object-cover">
-      <h1 class="text-2xl font-black text-slate-800 tracking-tight">SSB DASHBOARD</h1>
-      <p class="text-[10px] text-slate-500 uppercase tracking-widest font-bold">U-14 Performance System</p>
+      <div class="inline-block p-1 bg-white rounded-full border-2 border-red-500 mb-4 shadow-md">
+         <img src="assets/logo.jpg" class="w-20 h-20 mx-auto rounded-full object-cover">
+      </div>
+      <h1 class="text-3xl font-black text-slate-800 tracking-tight leading-none">SSB Dashboard</h1>
+      <p class="text-xs text-slate-400 font-semibold mt-2">Login Akun SSB U-14</p>
     </div>
 
     <div class="space-y-4">
-      <div class="form-control">
-        <input type="text" id="user" placeholder="Username" class="input input-bordered w-full bg-slate-50 border-slate-200 focus:border-red-600">
-      </div>
-      
-      <div class="form-control">
-        <select id="role" class="select select-bordered w-full bg-slate-50 border-slate-200">
-          <option value="pelatih">⚽ Coach Access</option>
-          <option value="siswa">🏃 Player Access</option>
-        </select>
+      <!-- 1. USERNAME -->
+      <div class="form-control relative">
+        <input type="text" id="user" placeholder="Username" class="input input-bordered w-full bg-slate-50 border-slate-200 focus:border-red-600 rounded-2xl pl-12 font-mesium transition-all">
+        <i data-lucide="user" class="w-5 h-5 absolute left-4 top-1/2 -translate-y-1/2 text-slate-300"></i>
       </div>
 
-      <button onclick="login()" class="btn btn-ssb bg-red-600 hover:bg-red-700 border-none text-white w-full shadow-lg mt-4">
-        MASUK SEKARANG
+      <!-- 2. PASSWORD (TAMBAHAN BARU) -->
+      <div class="form-control relative">
+        <input type="password" id="pass" placeholder="Password" class="input input-bordered w-full bg-slate-50 border-slate-200 focus:border-red-600 rounded-2xl pl-12 font-medium transition-all">
+        <i data-lucide="lock" class="w-5 h-5 absolute left-4 top-1/2 -translate-y-1/2 text-slate-300"></i>
+      </div>
+      
+      <!-- 3. ROLE SELECTION -->
+      <div class="form-control relative">
+        <select id="role" class="select select-bordered w-full bg-slate-50 border-slate-200 rounded-2xl pl-12 font-bold focus:border-red-600 transition-all">
+          <option value="pelatih">Coach</option>
+          <option value="siswa">Player</option>
+        </select>
+        <i data-lucide="shield-check" class="w-5 h-5 absolute left-4 top-1/2 -translate-y-1/2 text-slate-300"></i>
+      </div>
+
+      <button onclick="login()" class="btn bg-[#d00000] hover:bg-red-700 border-none text-white w-full h-14 rounded-2xl font-bold shadow-lg mt-4 shadow-red-200 transition-all active:scale-95">
+        Login
       </button>
+
+      <p class="text-center text-[10px] font-bold text-slate-300 pt-6">SSB Dashboard V0.1</p>
     </div>
   </div>
+
   <script src="app.js"></script>
+  <script>lucide.createIcons();</script>
 </body>
 
 </html>

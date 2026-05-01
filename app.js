@@ -8,14 +8,24 @@ if ("serviceWorker" in navigator) {
 }
 
 function login() {
-  const user = document.getElementById("user").value;
-  const role = document.getElementById("role").value;
+  const userElement = document.getElementById("user");
+  const roleElement = document.getElementById("role");
+
+  // Cek dulu elemennya ada atau nggak biar nggak error
+  if (!userElement || !roleElement) {
+    console.error("Elemen input tidak ditemukan!");
+    return;
+  }
+
+  const user = userElement.value.trim();
+  const role = roleElement.value;
 
   if (user === "") {
     alert("Masukkan Username!");
     return;
   }
 
+  // Redirect sesuai pilihan akses
   if (role === "pelatih") {
     window.location.href = "dashboard.html";
   } else {
