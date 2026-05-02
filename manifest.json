@@ -1,20 +1,31 @@
 {
   "name": "SSB Leaderboard",
   "short_name": "SSB-App",
-  "start_url": "index.html",
+  "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#d00000",
   "theme_color": "#d00000",
   "icons": [
     {
-      "src": "assets/logo.jpg",
+      "src": "assets/logo.png",
       "sizes": "192x192",
-      "type": "image/jpeg"
+      "type": "image/png",
+      "purpose": "any"
     },
     {
-      "src": "assets/logo.jpg",
+      "src": "assets/logo.png",
       "sizes": "512x512",
-      "type": "image/jpeg"
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "assets/screenshot.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Tampilan Dashboard"
     }
   ]
 }
