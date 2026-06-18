@@ -54,6 +54,33 @@
   </div>
 
   <script src="app.js"></script>
+    <script>
+        // Mengaktifkan icon Lucide
+        lucide.createIcons();
+
+        // LOGIC LOGIN UNTUK REDIRECT HALAMAN
+        function login() {
+            // Ambil value role yang dipilih (pelatih atau siswa)
+            const roleSelected = document.getElementById('role').value;
+            const usernameInput = document.getElementById('user').value.trim();
+            const passwordInput = document.getElementById('pass').value.trim();
+
+            // Validasi sederhana: Pastikan username & password sudah diisi
+            if (usernameInput === "" || passwordInput === "") {
+                alert("Username dan Password harus diisi ya!");
+                return;
+            }
+
+            // Arahkan halaman sesuai role yang dipilih
+            if (roleSelected === "siswa") {
+                // Jika pilih Player, langsung terusin ke profile.html
+                window.location.href = "profile.html";
+            } else if (roleSelected === "pelatih") {
+                // Jika pilih Coach, terusin ke dashboard pelatih
+                window.location.href = "dashboard.html";
+            }
+        }
+    </script>
   <script>lucide.createIcons();</script>
 </body>
 
